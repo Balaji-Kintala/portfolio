@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Online Shopping Applicatio",
+    "description": "Full-stack e-commerce platform with user authentication, product browsing, shopping cart management, and admin dashboard for product and order management.",
+    "technologies": ["Node.js", "MongoDB", "HTML5", "CSS3", "jQuery", "Bootstrap 5", "Handlebars.js"],
+    "liveLink": "",
+    "githubLink": "https://github.com/kintalabalaji/shopping-app"
+  },
+  {
+    "title": "Internship Management System",
+    "description": "Full-stack MERN application for managing internships, teams, and tasks. Features role-based access control, task submission with file uploads, exam management with automated scoring, and progress tracking.",
+    "technologies": ["MongoDB", "Express.js", "React.js", "Node.js", "Bootstrap 5", "JWT"],
+    "liveLink": "",
+    "githubLink": "https://github.com/kintalabalaji/internship-system"
+  }
+]
