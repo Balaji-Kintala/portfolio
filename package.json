@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "Professional Portfolio Website - Static Site",
   "main": "index.html",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
-    "start": "npx http-server public -p 5000",
+    "start": "npx http-server public -p ${PORT:-5000}",
     "dev": "npx http-server public -p 5000 -c-1"
   },
   "keywords": ["portfolio", "static", "html", "css", "javascript"],
-  "author": "",
+  "author": "Balaji Kintala",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "http-server": "^14.1.1"
   }
 }
