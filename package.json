@@ -4,7 +4,8 @@
   "description": "Professional Portfolio Website - Static Site",
   "main": "index.html",
   "scripts": {
-    "start": "npx http-server public -p 5000"
+    "start": "npx http-server public -p 5000",
+    "dev": "npx http-server public -p 5000 -c-1"
   },
   "keywords": ["portfolio", "static", "html", "css", "javascript"],
   "author": "",

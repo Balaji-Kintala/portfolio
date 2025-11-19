@@ -1,14 +1,14 @@
 # Professional Portfolio Website
 
-A modern, responsive portfolio website built with Node.js, Express, MongoDB, and Bootstrap 5.
+A modern, responsive static portfolio website built with HTML5, CSS3, JavaScript, and Bootstrap 5.
 
 ## Features
 
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Project Showcase**: Display your projects with descriptions, technologies, and links
-- **Contact Form**: Collect messages from visitors with MongoDB storage
+- **Contact Form**: Local form feedback with email redirect
 - **Modern UI**: Built with Bootstrap 5 and custom CSS with smooth animations
-- **RESTful API**: Backend API for managing projects and contact messages
+- **Static Site**: No backend or database required - fast and lightweight
 
 ## Tech Stack
 
@@ -16,26 +16,18 @@ A modern, responsive portfolio website built with Node.js, Express, MongoDB, and
 - HTML5
 - CSS3
 - JavaScript (ES6+)
-- jQuery (optional)
 - Bootstrap 5
-- Handlebars.js (optional)
-
-**Backend:**
-- Node.js
-- Express.js
-
-**Database:**
-- MongoDB
+- Google Fonts (Inter)
 
 **Tools:**
 - Git & GitHub
 - VS Code
+- http-server (for local development)
 
 ## Installation
 
 ### Prerequisites
 - Node.js (v14 or higher)
-- MongoDB (local or cloud instance)
 - npm or yarn
 
 ### Setup Steps
@@ -50,78 +42,37 @@ A modern, responsive portfolio website built with Node.js, Express, MongoDB, and
    npm install
    ```
 
-3. **Configure environment variables:**
-   Create a `.env` file in the root directory:
-   ```
-   PORT=5000
-   MONGODB_URI=mongodb://localhost:27017/portfolio
-   NODE_ENV=development
-   ```
-
-   For MongoDB Atlas (cloud):
-   ```
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/portfolio
-   ```
-
-4. **Start the server:**
+3. **Start the development server:**
    ```bash
    npm start
    ```
+   The server will run on `http://localhost:5000`
 
-5. **Open in browser:**
+4. **Open in browser:**
    Navigate to `http://localhost:5000`
 
-## API Endpoints
+## Adding/Editing Projects
 
-### Projects
+To add or edit projects, modify the `PROJECTS` array in `public/js/app.js`:
 
-- **GET** `/api/projects` - Fetch all projects
-- **POST** `/api/projects` - Add a new project
-
-**Project Object:**
-```json
-{
-  "title": "Project Name",
-  "description": "Project description",
-  "technologies": ["JavaScript", "Node.js", "MongoDB"],
-  "imageUrl": "https://example.com/image.jpg",
-  "liveLink": "https://example.com",
-  "githubLink": "https://github.com/user/repo"
-}
+```javascript
+const PROJECTS = [
+  {
+    title: "Project Name",
+    description: "Project description",
+    technologies: ["JavaScript", "HTML5", "CSS3"],
+    imageUrl: "https://example.com/image.jpg",
+    githubLink: "https://github.com/user/repo"
+  }
+];
 ```
 
-### Contact Messages
-
-- **GET** `/api/contact` - Fetch all contact messages
-- **POST** `/api/contact` - Submit a contact message
-
-**Contact Object:**
-```json
-{
-  "name": "Visitor Name",
-  "email": "visitor@example.com",
-  "message": "Message content"
-}
-```
-
-## Adding Projects
-
-You can add projects via the API:
-
-```bash
-curl -X POST http://localhost:5000/api/projects \
-  -H "Content-Type: application/json" \
-  -d '{
-    "title": "My Awesome Project",
-    "description": "A brief description of the project",
-    "technologies": ["JavaScript", "Node.js", "MongoDB"],
-    "imageUrl": "https://example.com/image.jpg",
-    "liveLink": "https://project-demo.com",
-    "githubLink": "https://github.com/user/project"
-  }'
-```
-
-Or use a tool like Postman to make requests.
+**Project Object Properties:**
+- `title` (string) - Project name
+- `description` (string) - Project description
+- `technologies` (array) - List of technologies used
+- `imageUrl` (string, optional) - Project image URL
+- `githubLink` (string, optional) - GitHub repository link
 
 ## Customization
 
@@ -144,19 +95,28 @@ Add new sections to `public/index.html` and update navigation links.
 
 ## Deployment
 
-### Deploy to Heroku
+### Deploy to Netlify
 
-1. Create a Heroku account and install Heroku CLI
-2. Login: `heroku login`
-3. Create app: `heroku create your-app-name`
-4. Set environment variables:
-   ```bash
-   heroku config:set MONGODB_URI=your_mongodb_uri
-   ```
-5. Deploy: `git push heroku main`
+1. Connect your GitHub repository to Netlify
+2. Set build command: (leave empty - static site)
+3. Set publish directory: `public`
+4. Deploy
 
-### Deploy to Netlify (Frontend Only)
-Build a static version and deploy the `public` folder.
+### Deploy to Vercel
+
+1. Connect your GitHub repository to Vercel
+2. Set root directory: `public`
+3. Deploy
+
+### Deploy to GitHub Pages
+
+1. Push to GitHub
+2. Enable GitHub Pages in repository settings
+3. Set source to `main` branch and `/public` folder
+
+### Deploy to Any Static Host
+
+Since this is a static site, you can deploy the `public` folder to any static hosting service (AWS S3, Firebase Hosting, etc.)
 
 ## Project Structure
 
@@ -177,11 +137,11 @@ portfolio/
 ## Future Enhancements
 
 - [ ] Add blog section
-- [ ] Implement admin dashboard
 - [ ] Add dark mode toggle
-- [ ] Email notifications for contact messages
+- [ ] Email integration for contact form
 - [ ] Project filtering by technology
 - [ ] Analytics integration
+- [ ] SEO optimization
 
 ## License
 
