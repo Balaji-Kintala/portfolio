@@ -2,15 +2,27 @@
 const PROJECTS = [
   {
     title: "Online Shopping Application",
-    description: "Full-stack e-commerce platform with user authentication, product browsing, shopping cart management, and admin dashboard for product and order management.",
-    technologies: ["Node.js", "MongoDB", "HTML5", "CSS3", "jQuery", "Bootstrap 5", "Handlebars.js"],
+    description: "This project is an Online Shopping Application with a React and TypeScript frontend and a Node.js/Express backend. Users can browse products, view details, add items to a cart, and proceed to checkout. The backend manages authentication, product and category data, and user accounts using MongoDB. The app is structured for scalability and modern web development best practices.",
+    technologies: ["React", "TypeScript","Vite","Tailwind CSS","Axios","Node.js","Express.js","MongoDB", "JWT (JSON Web Tokens)"], 
     githubLink: "https://github.com/Balaji-Kintala/OnlineShopping"
   },
   {
     title: "Internship Management System",
-    description: "Full-stack MERN application for managing internships, teams, and tasks. Features role-based access control, task submission with file uploads, exam management with automated scoring, and progress tracking.",
-    technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "Bootstrap 5", "JWT"],
+    description: "This Internship Management System is a MERN stack web application that helps manage internships, users, teams, tasks, resources, exams, and progress. It features a Node.js/Express backend with RESTful APIs and authentication, and a React frontend with role-based dashboards for admins and interns. The system streamlines internship administration and progress tracking in an organized, scalable way.",
+    technologies: ["React", "Node.js","Express.js","MongoDB","JavaScript","HTML","CSS"],
     githubLink: "https://github.com/Balaji-Kintala/internship-management-app"
+  },
+  {
+    title: "Modern Web Application for Tours & Regions",
+    description: "This project is a full-stack web application for exploring tours and regions. It features a Node.js/TypeScript backend for managing users, places, regions, and reviews, and a React/TypeScript frontend for user interaction, authentication, and browsing tour information.",
+    technologies: ["React", "TypeScript","Vite","CSS","Axios","Node.js","Express.js","MongoDB"],
+    githubLink: "https://github.com/Balaji-Kintala/modern-web-application-for-tours-and-regions"
+  },
+  {
+    title: "Solar Catalogue",
+    description: "Solar product catalogue web application built with React and Vite. It features multiple pages (Home, Products, About, Contact, Dealers), reusable components (Navbar, Footer, ProductModal), and organized styles for each section. The app likely allows users to browse solar products, view details in modals, and access information about the company and its dealers.",
+    technologies: ["React", "Vite","JavaScript (JSX)","CSS"],
+    githubLink: "https://github.com/Balaji-Kintala/solar-catalogue"
   }
 ];
 
