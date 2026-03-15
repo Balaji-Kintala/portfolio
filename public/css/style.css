@@ -529,15 +529,31 @@ body {
     transition: all 0.3s ease;
 }
 
-.project-links .btn-live {
+/* View Project button */
+.project-links .btn-view-project {
     background: var(--accent-color);
     color: white;
+    border: none;
 }
 
-.project-links .btn-live:hover {
+.project-links .btn-view-project:hover {
     background: #2563eb;
+    color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.project-links .btn-github {
+    background: #222c36;
+    color: #fff;
+    border: none;
+}
+
+.project-links .btn-github:hover {
+    background: #333f4f;
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 212, 255, 0.15);
 }
 
 .project-links .btn-github {
